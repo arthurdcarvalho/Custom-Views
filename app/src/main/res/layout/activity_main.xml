@@ -17,6 +17,7 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintTop_toTopOf="parent"
             app:hasSendButton="true"
+            app:sendText="@string/enviar"
             app:maskType="Date"
     />
 
