@@ -8,7 +8,7 @@ import android.view.inputmethod.EditorInfo
 class CustomEditText(context: Context?, attributeSet: AttributeSet) : TextInputEditText(context, attributeSet) {
 
     init {
-        inputType = EditorInfo.TYPE_CLASS_NUMBER
+
     }
 
     fun getUpperText() = text.toString().toUpperCase()
