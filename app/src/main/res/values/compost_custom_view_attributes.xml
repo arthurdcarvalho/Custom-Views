@@ -4,6 +4,7 @@
     <declare-styleable name="CompostCustomView">
 
         <attr name="hasSendButton" format="boolean"/>
+        <attr name="sendText" format="string" />
 
         <attr name="maskType" format="enum">
             <enum name="CPF" value="1"/>
@@ -14,6 +15,7 @@
             <enum name="CreditCardExpiration" value="6"/>
             <enum name="Date" value="7"/>
         </attr>
+
 
     </declare-styleable>
 
