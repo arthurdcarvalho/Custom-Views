@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <android.support.design.widget.TextInputLayout
+            app:layout_constraintEnd_toStartOf="@+id/testProgressBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:counterMaxLength="14"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/containerForInput">
+
+        <br.com.arthur.customviews.views.CustomEditText
+                android:id="@+id/input"
+                android:layout_width="match_parent"
+                android:imeOptions="actionDone"
+                android:maxLength="14"
+                android:maxLines="1"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/testProgressBar"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/testProgressBar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Senha"
+            app:counterMaxLength="14"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/containerPassword"
+            app:layout_constraintTop_toBottomOf="@+id/containerCpf">
+
+        <br.com.arthur.customviews.views.CustomEditText
+                android:id="@+id/inputPassword"
+                android:layout_width="match_parent"
+                android:imeOptions="actionDone"
+                android:inputType="numberPassword"
+                android:maxLength="14"
+                android:maxLines="1"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/testProgressBar"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="16dp"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <ProgressBar
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/testProgressBar"
+            app:layout_constraintTop_toTopOf="@+id/containerCpf"
+            app:layout_constraintBottom_toBottomOf="@+id/containerCpf"/>
+
+    <Button android:layout_width="wrap_content"
+            android:id="@+id/buttonSend"
+            android:text="Enviar"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/containerPassword"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/testProgressBar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"/>
+
+</android.support.constraint.ConstraintLayout>
