@@ -37,6 +37,7 @@ class CompostCustomView(context: Context, private val attributesSet: AttributeSe
     private lateinit var inputWithMask: String
 
     private var hasButton: Boolean = false
+    private var buttonText: String? = ""
     private var maskFormat: Int? = null
 
     init {
@@ -67,6 +68,7 @@ class CompostCustomView(context: Context, private val attributesSet: AttributeSe
         ).apply {
             try {
                 hasButton = getBoolean(R.styleable.CompostCustomView_hasSendButton, false)
+                buttonText = getString(R.styleable.CompostCustomView_sendText)
                 maskFormat = getInt(R.styleable.CompostCustomView_maskType, 0)
             } finally {
                 recycle()
@@ -76,6 +78,7 @@ class CompostCustomView(context: Context, private val attributesSet: AttributeSe
 
     private fun constructView() {
         if (hasButton) buttonSend.visibility = View.VISIBLE else buttonSend.visibility = View.GONE
+        buttonSend.text = buttonText
         when (maskFormat) {
 
             MaskTypes.CPF.id -> {
