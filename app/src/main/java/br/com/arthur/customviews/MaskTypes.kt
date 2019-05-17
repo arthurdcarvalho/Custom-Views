@@ -3,6 +3,7 @@ package br.com.arthur.customviews
 enum class MaskTypes
 /**
  *
+ * @param id Mask Id
  * @param maskName Mask name
  * @param maskFormat Mask Format
  * @param unmaskCount Text length with no masked
