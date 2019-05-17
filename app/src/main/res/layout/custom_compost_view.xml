@@ -13,7 +13,6 @@
             android:layout_height="wrap_content"
             app:counterMaxLength="14"
             android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp"
             android:id="@+id/containerForInput">
 
         <br.com.arthur.customviews.views.CustomEditText
@@ -36,55 +35,57 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
+            android:id="@+id/containerPassword"
             android:visibility="visible"
-            app:layout_constraintEnd_toStartOf="@+id/testProgressBar"
-            app:layout_constraintStart_toStartOf="parent"
+            android:hint="@string/senha"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Senha"
+            app:layout_constraintEnd_toStartOf="@+id/testProgressBar"
+            app:layout_constraintStart_toStartOf="parent"
             app:counterMaxLength="14"
-            android:layout_marginEnd="8dp"
-            android:id="@+id/containerPassword"
-            app:layout_constraintTop_toBottomOf="@+id/containerCpf">
+            app:layout_constraintTop_toBottomOf="@+id/containerForInput">
 
         <br.com.arthur.customviews.views.CustomEditText
                 android:id="@+id/inputPassword"
-                android:layout_width="match_parent"
-                android:imeOptions="actionDone"
                 android:inputType="numberPassword"
-                android:maxLength="14"
                 android:maxLines="1"
+                android:maxLength="14"
+                android:imeOptions="actionDone"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/testProgressBar"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/testProgressBar"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginBottom="16dp"/>
+        />
 
     </android.support.design.widget.TextInputLayout>
 
     <ProgressBar
+            android:id="@+id/testProgressBar"
             android:visibility="invisible"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="16dp"
-            android:id="@+id/testProgressBar"
-            app:layout_constraintTop_toTopOf="@+id/containerCpf"
-            app:layout_constraintBottom_toBottomOf="@+id/containerCpf"/>
+            app:layout_constraintTop_toTopOf="@+id/containerForInput"
+            app:layout_constraintBottom_toBottomOf="@+id/containerForInput"
+    />
 
-    <Button android:layout_width="wrap_content"
+    <Button
             android:id="@+id/buttonSend"
-            android:text="Enviar"
+            android:text="@string/enviar"
+            android:layout_width="wrap_content"
             android:visibility="invisible"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/containerPassword"
-            android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="@+id/testProgressBar"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp"/>
+    />
 
 </android.support.constraint.ConstraintLayout>
