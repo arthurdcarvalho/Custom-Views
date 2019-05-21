@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     private fun initComponents() {
         compostCustomView = findViewById(R.id.compostCustomView)
         inputValueNoMask = findViewById(R.id.inputValueNoMask)
-        inputValueNoMask = findViewById(R.id.inputValueNoMask)
+        inputValueMask = findViewById(R.id.inputValueMask)
 
         compostCustomView.setButtonSendListener(View.OnClickListener {
             valueNoMask = compostCustomView.getInputWithNoMask()
