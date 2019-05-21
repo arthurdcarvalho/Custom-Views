@@ -9,9 +9,11 @@ import br.com.arthur.customviews.views.CompostCustomView
 class MainActivity : AppCompatActivity() {
 
     private lateinit var compostCustomView: CompostCustomView
-    private lateinit var inputValue: TextView
+    private lateinit var inputValueNoMask: TextView
+    private lateinit var inputValueMask: TextView
 
-    private lateinit var value: String
+    private lateinit var valueNoMask: String
+    private lateinit var valueMask: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,11 +24,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun initComponents() {
         compostCustomView = findViewById(R.id.compostCustomView)
-        inputValue = findViewById(R.id.inputValue)
+        inputValueNoMask = findViewById(R.id.inputValueNoMask)
+        inputValueNoMask = findViewById(R.id.inputValueNoMask)
 
         compostCustomView.setButtonSendListener(View.OnClickListener {
-            value = compostCustomView.getInputWithNoMask()
-            inputValue.text = value
+            valueNoMask = compostCustomView.getInputWithNoMask()
+            valueMask = compostCustomView.getInputWithMask()
+
+            inputValueNoMask.text = valueNoMask
+            inputValueMask.text = valueMask
         })
     }
 
