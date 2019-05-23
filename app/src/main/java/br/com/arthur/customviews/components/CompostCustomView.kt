@@ -1,4 +1,4 @@
-package br.com.arthur.customviews.views
+package br.com.arthur.customviews.components
 
 import android.content.Context
 import android.support.constraint.ConstraintLayout

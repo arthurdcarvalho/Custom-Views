@@ -1,10 +1,11 @@
-package br.com.arthur.customviews
+package br.com.arthur.customviews.views
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.TextView
-import br.com.arthur.customviews.views.CompostCustomView
+import br.com.arthur.customviews.R
+import br.com.arthur.customviews.components.CompostCustomView
 
 class MainActivity : AppCompatActivity() {
 

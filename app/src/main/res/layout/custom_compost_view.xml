@@ -14,7 +14,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-        <br.com.arthur.customviews.views.CustomEditText
+        <br.com.arthur.customviews.components.CustomEditText
                 android:id="@+id/input"
                 android:layout_width="match_parent"
                 android:imeOptions="actionDone"
@@ -44,7 +44,7 @@
             app:counterMaxLength="14"
             app:layout_constraintTop_toBottomOf="@+id/containerForInput">
 
-        <br.com.arthur.customviews.views.CustomEditText
+        <br.com.arthur.customviews.components.CustomEditText
                 android:id="@+id/inputPassword"
                 android:inputType="numberPassword"
                 android:maxLines="1"

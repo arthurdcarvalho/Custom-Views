@@ -1,9 +1,8 @@
-package br.com.arthur.customviews.views
+package br.com.arthur.customviews.components
 
 import android.content.Context
 import android.support.design.widget.TextInputEditText
 import android.util.AttributeSet
-import android.view.inputmethod.EditorInfo
 
 class CustomEditText(context: Context?, attributeSet: AttributeSet) : TextInputEditText(context, attributeSet) {
 
